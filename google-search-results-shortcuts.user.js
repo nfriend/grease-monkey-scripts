@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Google Search Results Shortcuts
 // @namespace   http://nathanfriend.io
-// @description Adds handy keyboard shortcuts to the Google search page.  Note that 
+// @description Adds handy keyboard shortcuts to the Google search page.  Note that the "J" and "K" shortcuts only work if Google Instant is enabled.
 // @include     *google.*/search*
 // @version     1
 // @grant       none
