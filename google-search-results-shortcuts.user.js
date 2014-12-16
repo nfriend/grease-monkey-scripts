@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Google Search Results Shortcuts
 // @namespace   http://nathanfriend.io
-// @description Adds handy keyboard shortcuts to the Google search page.  Note that the "J" and "K" shortcuts only work if Google Instant is enabled.
+// @description Adds handy keyboard shortcuts to the Google search page. Note that the "J" and "K" shortcuts only work if Google Instant is enabled.
 // @include     *google.*/search*
 // @version     1
 // @grant       none
@@ -19,7 +19,7 @@ var j = 74,
 
 body.addEventListener('keydown', function (e) {
   
-  // make "J" and "K" synonymous with the up and down arrows
+  // make "K" and "J" synonymous with the up and down arrows
   if ((e.keyCode === j || e.keyCode === k) && !e.ctrlKey) {
     e.preventDefault();
     e.stopPropagation();
