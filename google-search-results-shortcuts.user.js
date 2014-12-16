@@ -36,14 +36,14 @@ body.addEventListener('keydown', function (e) {
     e.preventDefault();
     e.stopPropagation();
   
-    var targetLink = document.getElementsByClassName('g')[e.keyCode - 49].getElementsByClassName('r')[0].getElementsByTagName('a')[0];
+    var targetLink = document.getElementsByClassName('g')[e.keyCode - 49].getElementsByTagName('a')[0];
     if (linksToOpen.indexOf(targetLink.href) === -1) {
       linksToOpen.push(targetLink.href);
     }
   }
   
   if (e.keyCode === enter && linksToOpen.length > 0) {
-    for (var i = 0; i < linksToOpen.length; i++) {
+    for (var i = linksToOpen.length - 1; i >= 0; i--) {
       window.open(linksToOpen[i], '_blank');
     }
     linksToOpen = [];
