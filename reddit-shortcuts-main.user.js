@@ -17,6 +17,10 @@ if (!jQuery) {
     var j = 74,
         k = 75,
         c = 67,
+        up = 38,
+        down = 40,
+        left = 37,
+        right = 39,
         enter = 13,
         focusedClass = 'greasemonkey-focused',
         $body = $('body'),
@@ -25,18 +29,18 @@ if (!jQuery) {
 
     $body.keydown(function (e) {
         // make "K" and "J" move focus from link to link
-        if ((e.keyCode === j || e.keyCode === k || e.keyCode === c) && !e.ctrlKey) {
+        if ((e.keyCode === j || e.keyCode == down || e.keyCode === k || e.keyCode == up || e.keyCode === c) && !e.ctrlKey) {
             e.preventDefault();
             e.stopPropagation();
 
-            if (e.keyCode === j) {
+            if (e.keyCode === j || e.keyCode === down) {
                 // move down
 
                 if (currentLinkIndex < $links.size() - 1) {
                     currentLinkIndex++;
                     focusAndScrollLink(currentLinkIndex, 'up');
                 }
-            } else if (e.keyCode === k) {
+            } else if (e.keyCode === k || e.keyCode === up) {
                 // move up
 
                 if (currentLinkIndex > 0) {
