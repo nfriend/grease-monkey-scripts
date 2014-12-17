@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name        Reddit Shortcuts
+// @name        Reddit Shortcuts for Comments Page
 // @namespace   http://nathanfriend.io
-// @description Makes reddit more keyboard navigable.
-// @include     *reddit.com/r/*
+// @description Makes reddit more keyboard navigable. This script is only applied on a comments page.
+// @include     *reddit.com/r/*/comments/*
 // @version     1
 // @grant       none
 // ==/UserScript==
 
 if (!jQuery) {
-    console.error('jQuery not found! Greasemonkey script "reddit-shortcuts.user.js" relies on jQuery.');
+    console.error('jQuery not found! Greasemonkey script "reddit-shortcuts-comment.user.js" relies on jQuery.');
 }
 
 (function ($) {
