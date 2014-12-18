@@ -14,4 +14,10 @@ A set of personal Greasemonkey scripts, kept here for safe keeping.
 - jump from link to link using "K" and "J" (or the up and down arrow keys)
 - press Enter to follow a link
 - press "C" to open the comments of the current link in a new tab
+
+
+###[reddit-shortcuts-comment.user.js](reddit-shortcuts-comment.user.js)
+
+- jump from comment to comment using "K" and "J" (or the up and down arrow keys)
+- expand and collapse comments using "L" and "H" (or the right and left arrow keys)
  
