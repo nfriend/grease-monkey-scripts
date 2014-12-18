@@ -2,8 +2,8 @@
 // @name        Reddit Shortcuts for Link Page
 // @namespace   http://nathanfriend.io
 // @description Makes reddit more keyboard navigable. This script is only applied on a link page (not a comments page).
-// @include     *reddit.com/r/*
-// @exclude     *reddit.com/r/*/comments/*
+// @include     *reddit.com*
+// @exclude     *reddit.com*/comments/*
 // @version     1
 // @grant       none
 // ==/UserScript==
