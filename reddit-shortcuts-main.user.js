@@ -16,6 +16,7 @@ if (!jQuery) {
 
     var j = 74,
         k = 75,
+        l = 76,
         c = 67,
         up = 38,
         down = 40,
@@ -29,7 +30,7 @@ if (!jQuery) {
 
     $body.keydown(function (e) {
         // make "K" and "J" move focus from link to link
-        if ((e.keyCode === j || e.keyCode == down || e.keyCode === k || e.keyCode == up || e.keyCode === c) && !e.ctrlKey) {
+        if ((e.keyCode === j || e.keyCode == down || e.keyCode === k || e.keyCode == up || e.keyCode === c || e.keyCode == l || e.keyCode == right) && !e.ctrlKey) {
             e.preventDefault();
             e.stopPropagation();
 
@@ -47,7 +48,7 @@ if (!jQuery) {
                     currentLinkIndex--;
                     focusAndScrollLink(currentLinkIndex, 'down');
                 }
-            } else if (e.keyCode === c) {
+            } else if (e.keyCode === c || e.keyCode === l || e.keyCode == right) {
                 // open up the comments of the current link in a new tab
 
                 var $targetLink = $links.filter(':eq(' + currentLinkIndex + ')');
