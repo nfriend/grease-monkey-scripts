@@ -3,6 +3,10 @@ grease-monkey-scripts
 
 A set of personal Greasemonkey scripts, kept here for safe keeping.
 
+###[hn-comment-collapser.user.js](hn-comment-collapser.user.js)
+
+- adds reddit-style `[+]` and `[-]` controls to each comment in Hacker News comment threads
+
 ###[google-search-results-shortcuts.user.js](google-search-results-shortcuts.user.js)
 
 - makes "K" and "J" synonymous with the up and down arrow keys (only useful if Google Instant is enabled)
