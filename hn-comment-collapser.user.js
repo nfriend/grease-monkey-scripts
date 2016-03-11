@@ -67,7 +67,9 @@
         head.appendChild(style);
     }
 
-    injectStyles('.collapse-link { cursor: pointer; margin-left: -20px; position: absolute; letter-spacing: -3px; }');
     injectStyles('.collapse-link:hover { text-decoration: underline; }');
+    
+    var letterSpacing = /firefox/.test(navigator.userAgent) ? 1.1 : 3;
+    injectStyles('.collapse-link { cursor: pointer; margin-left: -20px; position: absolute; letter-spacing: -' + letterSpacing + 'px; }');
 
 })(jQuery)
