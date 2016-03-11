@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Hacker News Collapsing Comments and Shortcuts
+// @name        Hacker News Collapsing Comments
 // @namespace   http://nathanfriend.io
-// @description Adds comment collapsing and related keyboard shortcuts to Hacker News comment threads
+// @description Adds reddit-style comment collapsing to Hacker News comment threads
 // @include     *news.ycombinator.com/item*
 // @require     https://code.jquery.com/jquery-2.2.1.min.js
 // @version     1
@@ -11,17 +11,6 @@
 'use strict';
 
 (function ($) {
-
-    var j = 74,
-        k = 75,
-        h = 72,
-        l = 76,
-        up = 38,
-        down = 40,
-        left = 37,
-        right = 39,
-        enter = 13,
-        $body = $('body');
 
     var collapseLink = $('<div class="collapse-link">[−]</div>');
     collapseLink.click(function(e) {
