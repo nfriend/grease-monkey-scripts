@@ -34,7 +34,7 @@
             showOrHideAThing($this, false);
         }
     });
-    $('.votelinks').prepend(collapseLink);
+    $('.votelinks').slice(1).prepend(collapseLink);
 
     function showOrHideAThing($collapseLink, show) {
 
