@@ -70,8 +70,15 @@
 
             } else if (e.keyCode === h || e.keyCode === left) {
                 // collapse the link
+                
                 if (!$focusedAThing.find('.collapse-link').is('.collapsed')) {
                     $focusedAThing.find('.collapse-link').click();
+                } else {
+                    
+                    // if nodd is already collapsed, and it's a root node, close the current tab
+                    if (parseInt($focusedAThing.find('.ind>img').attr('width'), 10) === 0) {
+                        window.close();
+                    }
                 }
             }
 
