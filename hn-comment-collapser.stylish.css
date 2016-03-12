@@ -1,0 +1,5 @@
+@-moz-document regexp(".*news\\.ycombinator\\.com\\/item.*") {
+td.ind img {
+    margin-left: 20px;
+}
+}

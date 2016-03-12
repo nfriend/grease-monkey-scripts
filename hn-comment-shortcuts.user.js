@@ -64,12 +64,15 @@
             } else if (e.keyCode === l || e.keyCode === right) {
                 // expand the link
 
-                $focusedAThing.find('.collapse-link').click();
+                if ($focusedAThing.find('.collapse-link').is('.collapsed')) {
+                    $focusedAThing.find('.collapse-link').click();
+                }
 
             } else if (e.keyCode === h || e.keyCode === left) {
                 // collapse the link
-
-                $focusedAThing.find('.collapse-link').click();
+                if (!$focusedAThing.find('.collapse-link').is('.collapsed')) {
+                    $focusedAThing.find('.collapse-link').click();
+                }
             }
 
 
@@ -97,7 +100,7 @@
         style = document.createElement('style');
         style.type = 'text/css';
         style.innerHTML = cssString;
-        head.appendChild(style);jjj
+        head.appendChild(style);
     }
 
     // from http://stackoverflow.com/a/488073/1063392
@@ -114,7 +117,7 @@
     // auto-focus the first link
     var $firstComment = $('.athing').slice(1).first();
     focusAndScrollToComment($firstComment);
-    
+
     //$('.ind>img').each(function(ind) {
     //    $(this).attr('width', parseInt($(this).attr('width'), 10) + 15 + 'px');
     //});
